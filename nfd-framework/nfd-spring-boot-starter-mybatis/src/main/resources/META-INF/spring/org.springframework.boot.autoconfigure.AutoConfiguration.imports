@@ -1,0 +1,3 @@
+cn.qaiu.yyzy.framework.datasource.config.NfdDataSourceAutoConfiguration
+cn.qaiu.yyzy.framework.mybatis.config.NfdMybatisAutoConfiguration
+cn.qaiu.yyzy.framework.translate.config.NfdTranslateAutoConfiguration

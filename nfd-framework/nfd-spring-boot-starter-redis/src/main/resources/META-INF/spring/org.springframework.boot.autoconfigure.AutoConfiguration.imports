@@ -1,0 +1,2 @@
+cn.qaiu.yyzy.framework.redis.config.NfdRedisAutoConfiguration
+cn.qaiu.yyzy.framework.redis.config.NfdCacheAutoConfiguration

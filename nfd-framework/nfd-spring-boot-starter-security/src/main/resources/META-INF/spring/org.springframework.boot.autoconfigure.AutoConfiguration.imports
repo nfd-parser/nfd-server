@@ -1,0 +1,3 @@
+cn.qaiu.yyzy.framework.security.config.NfdSecurityAutoConfiguration
+cn.qaiu.yyzy.framework.security.config.NfdWebSecurityConfigurerAdapter
+cn.qaiu.yyzy.framework.operatelog.config.NfdOperateLogConfiguration

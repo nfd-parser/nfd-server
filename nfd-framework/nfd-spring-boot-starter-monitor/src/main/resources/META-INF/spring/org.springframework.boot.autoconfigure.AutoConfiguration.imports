@@ -1,0 +1,2 @@
+cn.qaiu.yyzy.framework.tracer.config.NfdTracerAutoConfiguration
+cn.qaiu.yyzy.framework.tracer.config.NfdMetricsAutoConfiguration

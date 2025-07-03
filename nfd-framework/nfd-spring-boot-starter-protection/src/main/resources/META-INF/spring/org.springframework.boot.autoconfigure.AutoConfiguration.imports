@@ -1,0 +1,4 @@
+cn.qaiu.yyzy.framework.idempotent.config.NfdIdempotentConfiguration
+cn.qaiu.yyzy.framework.lock4j.config.NfdLock4jConfiguration
+cn.qaiu.yyzy.framework.ratelimiter.config.NfdRateLimiterConfiguration
+cn.qaiu.yyzy.framework.signature.config.NfdApiSignatureAutoConfiguration

@@ -1,0 +1,6 @@
+cn.qaiu.yyzy.framework.apilog.config.NfdApiLogAutoConfiguration
+cn.qaiu.yyzy.framework.jackson.config.NfdJacksonAutoConfiguration
+cn.qaiu.yyzy.framework.swagger.config.NfdSwaggerAutoConfiguration
+cn.qaiu.yyzy.framework.web.config.NfdWebAutoConfiguration
+cn.qaiu.yyzy.framework.xss.config.NfdXssAutoConfiguration
+cn.qaiu.yyzy.framework.banner.config.NfdBannerAutoConfiguration
