@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>cn.qaiu.yyzy</groupId>
+        <artifactId>nfd</artifactId>
+        <version>${revision}</version> <!-- 1. 修改 version 为 ${revision} -->
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>nfd-module-panmanager</artifactId>
+    <packaging>jar</packaging> <!-- 2. 新增 packaging 为 jar -->
+
+    <name>${project.artifactId}</name> <!-- 3. 新增 name 为 ${project.artifactId} -->
+    <description> <!-- 4. 新增 description 为该模块的描述 -->
+        网盘管理模块。
+    </description>
+
+    <dependencies>  <!-- 5. 新增依赖，这里引入的都是比较常用的业务组件、技术组件 -->
+        <!-- Web 相关 -->
+        <dependency>
+            <groupId>cn.qaiu.yyzy</groupId>
+            <artifactId>nfd-spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.qaiu.yyzy</groupId>
+            <artifactId>nfd-spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <!-- DB 相关 -->
+        <dependency>
+            <groupId>cn.qaiu.yyzy</groupId>
+            <artifactId>nfd-spring-boot-starter-mybatis</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>

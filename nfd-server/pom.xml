@@ -31,6 +31,11 @@
             <artifactId>nfd-module-infra</artifactId>
             <version>${revision}</version>
         </dependency>
+        <dependency>
+            <groupId>cn.qaiu.yyzy</groupId>
+            <artifactId>nfd-module-panmanager</artifactId>
+            <version>${revision}</version>
+        </dependency>
 
         <!-- 支付服务。默认注释，保证编译速度 -->
 <!--        <dependency>-->
