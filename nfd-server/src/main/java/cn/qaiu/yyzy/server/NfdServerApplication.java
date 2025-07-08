@@ -3,12 +3,10 @@ package cn.qaiu.yyzy.server;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.TimeZone;
+
 /**
  * 项目的启动类
- *
- * 如果你碰到启动的问题，请认真阅读 https://doc.iocoder.cn/quick-start/ 文章
- * 如果你碰到启动的问题，请认真阅读 https://doc.iocoder.cn/quick-start/ 文章
- * 如果你碰到启动的问题，请认真阅读 https://doc.iocoder.cn/quick-start/ 文章
  *
  * @author 芋道源码
  */
@@ -17,18 +15,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class NfdServerApplication {
 
     public static void main(String[] args) {
-        // 如果你碰到启动的问题，请认真阅读 https://doc.iocoder.cn/quick-start/ 文章
-        // 如果你碰到启动的问题，请认真阅读 https://doc.iocoder.cn/quick-start/ 文章
-        // 如果你碰到启动的问题，请认真阅读 https://doc.iocoder.cn/quick-start/ 文章
+
+        // 强制设置 JVM 时区为东八区
+        TimeZone.setDefault(TimeZone.getTimeZone("Asia/Shanghai"));
 
         SpringApplication.run(NfdServerApplication.class, args);
-//        new SpringApplicationBuilder(NfdServerApplication.class)
-//                .applicationStartup(new BufferingApplicationStartup(20480))
-//                .run(args);
-
-        // 如果你碰到启动的问题，请认真阅读 https://doc.iocoder.cn/quick-start/ 文章
-        // 如果你碰到启动的问题，请认真阅读 https://doc.iocoder.cn/quick-start/ 文章
-        // 如果你碰到启动的问题，请认真阅读 https://doc.iocoder.cn/quick-start/ 文章
     }
 
 }

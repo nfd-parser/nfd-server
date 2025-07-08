@@ -1,5 +1,5 @@
 server:
-  port: 48080
+  port: 10808
 
 --- #################### 数据库相关配置 ####################
 
@@ -8,10 +8,8 @@ spring:
     exclude:
       - org.springframework.ai.autoconfigure.vectorstore.qdrant.QdrantVectorStoreAutoConfiguration # 禁用 AI 模块的 Qdrant，手动创建
       - org.springframework.ai.autoconfigure.vectorstore.milvus.MilvusVectorStoreAutoConfiguration # 禁用 AI 模块的 Milvus，手动创建
-  # 数据源配置项
-  autoconfigure:
-    exclude:
       - com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure # 排除 Druid 的自动配置，使用 dynamic-datasource-spring-boot-starter 配置多数据源
+  # 数据源配置项
   datasource:
     druid: # Druid 【监控】相关的全局配置
       web-stat-filter:
@@ -54,7 +52,7 @@ spring:
           lazy: true # 开启懒加载，保证启动速度
           url: jdbc:mysql://127.0.0.1:3306/nfd?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true&rewriteBatchedStatements=true # MySQL Connector/J 8.X 连接的示例
           username: root
-          password: pwd
+          password: pw
 
   # Redis 配置。Redisson 默认的配置足够使用，一般不需要进行调优
   redis:
@@ -225,3 +223,7 @@ iot:
 # 插件配置
 pf4j:
   pluginsDir: ${user.home}/plugins # 插件目录
+
+spring:
+  jackson:
+    time-zone: Asia/Shanghai

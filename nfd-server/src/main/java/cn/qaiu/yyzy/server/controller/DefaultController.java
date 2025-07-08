@@ -21,75 +21,75 @@ import static cn.qaiu.yyzy.framework.common.exception.enums.GlobalErrorCodeConst
 @Slf4j
 public class DefaultController {
 
-    @RequestMapping("/admin-api/bpm/**")
-    public CommonResult<Boolean> bpm404() {
-        return CommonResult.error(NOT_IMPLEMENTED.getCode(),
-                "[工作流模块 nfd-module-bpm - 已禁用][参考 https://doc.iocoder.cn/bpm/ 开启]");
-    }
-
-    @RequestMapping("/admin-api/mp/**")
-    public CommonResult<Boolean> mp404() {
-        return CommonResult.error(NOT_IMPLEMENTED.getCode(),
-                "[微信公众号 nfd-module-mp - 已禁用][参考 https://doc.iocoder.cn/mp/build/ 开启]");
-    }
-
-    @RequestMapping(value = { "/admin-api/product/**", // 商品中心
-            "/admin-api/trade/**", // 交易中心
-            "/admin-api/promotion/**" }) // 营销中心
-    public CommonResult<Boolean> mall404() {
-        return CommonResult.error(NOT_IMPLEMENTED.getCode(),
-                "[商城系统 nfd-module-mall - 已禁用][参考 https://doc.iocoder.cn/mall/build/ 开启]");
-    }
-
-    @RequestMapping("/admin-api/erp/**")
-    public CommonResult<Boolean> erp404() {
-        return CommonResult.error(NOT_IMPLEMENTED.getCode(),
-                "[ERP 模块 nfd-module-erp - 已禁用][参考 https://doc.iocoder.cn/erp/build/ 开启]");
-    }
-
-    @RequestMapping("/admin-api/crm/**")
-    public CommonResult<Boolean> crm404() {
-        return CommonResult.error(NOT_IMPLEMENTED.getCode(),
-                "[CRM 模块 nfd-module-crm - 已禁用][参考 https://doc.iocoder.cn/crm/build/ 开启]");
-    }
-
-    @RequestMapping(value = { "/admin-api/report/**"})
-    public CommonResult<Boolean> report404() {
-        return CommonResult.error(NOT_IMPLEMENTED.getCode(),
-                "[报表模块 nfd-module-report - 已禁用][参考 https://doc.iocoder.cn/report/ 开启]");
-    }
-
-    @RequestMapping(value = { "/admin-api/pay/**"})
-    public CommonResult<Boolean> pay404() {
-        return CommonResult.error(NOT_IMPLEMENTED.getCode(),
-                "[支付模块 nfd-module-pay - 已禁用][参考 https://doc.iocoder.cn/pay/build/ 开启]");
-    }
-
-    @RequestMapping(value = { "/admin-api/ai/**"})
-    public CommonResult<Boolean> ai404() {
-        return CommonResult.error(NOT_IMPLEMENTED.getCode(),
-                "[AI 大模型 nfd-module-ai - 已禁用][参考 https://doc.iocoder.cn/ai/build/ 开启]");
-    }
-
-    @RequestMapping(value = { "/admin-api/iot/**"})
-    public CommonResult<Boolean> iot404() {
-        return CommonResult.error(NOT_IMPLEMENTED.getCode(),
-                "[IoT 物联网 nfd-module-iot - 已禁用][参考 https://doc.iocoder.cn/iot/build/ 开启]");
-    }
-
-    /**
-     * 测试接口：打印 query、header、body
-     */
-    @RequestMapping(value = { "/test" })
-    @PermitAll
-    public CommonResult<Boolean> test(HttpServletRequest request) {
-        // 打印查询参数
-        log.info("Query: {}", ServletUtils.getParamMap(request));
-        // 打印请求头
-        log.info("Header: {}", ServletUtils.getHeaderMap(request));
-        // 打印请求体
-        log.info("Body: {}", ServletUtils.getBody(request));
-        return CommonResult.success(true);
-    }
+//    @RequestMapping("/admin-api/bpm/**")
+//    public CommonResult<Boolean> bpm404() {
+//        return CommonResult.error(NOT_IMPLEMENTED.getCode(),
+//                "[工作流模块 nfd-module-bpm - 已禁用][参考 https://doc.iocoder.cn/bpm/ 开启]");
+//    }
+//
+//    @RequestMapping("/admin-api/mp/**")
+//    public CommonResult<Boolean> mp404() {
+//        return CommonResult.error(NOT_IMPLEMENTED.getCode(),
+//                "[微信公众号 nfd-module-mp - 已禁用][参考 https://doc.iocoder.cn/mp/build/ 开启]");
+//    }
+//
+//    @RequestMapping(value = { "/admin-api/product/**", // 商品中心
+//            "/admin-api/trade/**", // 交易中心
+//            "/admin-api/promotion/**" }) // 营销中心
+//    public CommonResult<Boolean> mall404() {
+//        return CommonResult.error(NOT_IMPLEMENTED.getCode(),
+//                "[商城系统 nfd-module-mall - 已禁用][参考 https://doc.iocoder.cn/mall/build/ 开启]");
+//    }
+//
+//    @RequestMapping("/admin-api/erp/**")
+//    public CommonResult<Boolean> erp404() {
+//        return CommonResult.error(NOT_IMPLEMENTED.getCode(),
+//                "[ERP 模块 nfd-module-erp - 已禁用][参考 https://doc.iocoder.cn/erp/build/ 开启]");
+//    }
+//
+//    @RequestMapping("/admin-api/crm/**")
+//    public CommonResult<Boolean> crm404() {
+//        return CommonResult.error(NOT_IMPLEMENTED.getCode(),
+//                "[CRM 模块 nfd-module-crm - 已禁用][参考 https://doc.iocoder.cn/crm/build/ 开启]");
+//    }
+//
+//    @RequestMapping(value = { "/admin-api/report/**"})
+//    public CommonResult<Boolean> report404() {
+//        return CommonResult.error(NOT_IMPLEMENTED.getCode(),
+//                "[报表模块 nfd-module-report - 已禁用][参考 https://doc.iocoder.cn/report/ 开启]");
+//    }
+//
+//    @RequestMapping(value = { "/admin-api/pay/**"})
+//    public CommonResult<Boolean> pay404() {
+//        return CommonResult.error(NOT_IMPLEMENTED.getCode(),
+//                "[支付模块 nfd-module-pay - 已禁用][参考 https://doc.iocoder.cn/pay/build/ 开启]");
+//    }
+//
+//    @RequestMapping(value = { "/admin-api/ai/**"})
+//    public CommonResult<Boolean> ai404() {
+//        return CommonResult.error(NOT_IMPLEMENTED.getCode(),
+//                "[AI 大模型 nfd-module-ai - 已禁用][参考 https://doc.iocoder.cn/ai/build/ 开启]");
+//    }
+//
+//    @RequestMapping(value = { "/admin-api/iot/**"})
+//    public CommonResult<Boolean> iot404() {
+//        return CommonResult.error(NOT_IMPLEMENTED.getCode(),
+//                "[IoT 物联网 nfd-module-iot - 已禁用][参考 https://doc.iocoder.cn/iot/build/ 开启]");
+//    }
+//
+//    /**
+//     * 测试接口：打印 query、header、body
+//     */
+//    @RequestMapping(value = { "/test" })
+//    @PermitAll
+//    public CommonResult<Boolean> test(HttpServletRequest request) {
+//        // 打印查询参数
+//        log.info("Query: {}", ServletUtils.getParamMap(request));
+//        // 打印请求头
+//        log.info("Header: {}", ServletUtils.getHeaderMap(request));
+//        // 打印请求体
+//        log.info("Body: {}", ServletUtils.getBody(request));
+//        return CommonResult.success(true);
+//    }
 
 }

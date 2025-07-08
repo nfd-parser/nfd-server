@@ -33,7 +33,7 @@ services:
     image: nfd-server
     restart: unless-stopped
     ports:
-      - "48080:48080"
+      - "10808:10808"
     environment:
       # https://github.com/polovyivan/docker-pass-configs-to-container
       SPRING_PROFILES_ACTIVE: local

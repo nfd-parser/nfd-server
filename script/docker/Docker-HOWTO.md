@@ -44,6 +44,6 @@ docker compose --env-file docker.env up -d
 ## 服务器的宿主机端口映射
 
 - admin ui: http://localhost:8080
-- api server: http://localhost:48080
+- api server: http://localhost:10808
 - mysql: root/123456, port: 3306
 - redis: port: 6379
