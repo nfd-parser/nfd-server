@@ -4,11 +4,11 @@
     <parent>
         <groupId>cn.qaiu.yyzy</groupId>
         <artifactId>nfd</artifactId>
-        <version>2.6.0-jdk8-SNAPSHOT</version>
+        <version>${revision}</version>
     </parent>
-
     <artifactId>nfd-module-parser</artifactId>
     <packaging>jar</packaging>
+    <version>2.6.0-jdk8-SNAPSHOT</version>
 
     <name>nfd-module-parser</name>
     <url>http://maven.apache.org</url>

@@ -24,8 +24,7 @@ import static cn.qaiu.yyzy.framework.common.exception.enums.GlobalErrorCodeConst
 public class ParserController {
 
     public static void main(String[] args) {
-
-        ParserCreate parserCreate = ParserCreate.fromShareUrl("http://www.baidu.com").setShareLinkInfoPwd("1234");
+        ParserCreate parserCreate = ParserCreate.fromShareUrl("https://www.baidu.com").setShareLinkInfoPwd("1234");
         Future<String> parse = parserCreate.createTool().parse();
         parse.onComplete(ar -> {
             if (ar.succeeded()) {
