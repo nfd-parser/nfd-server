@@ -6,8 +6,10 @@ import io.vertx.core.http.HttpServerRequest;
 import io.vertx.core.json.JsonObject;
 import io.vertx.core.shareddata.LocalMap;
 
+import javax.servlet.http.HttpServletRequest;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
+import java.util.Map;
 
 /**
  * 处理URL截断问题，拼接被截断的参数，特殊处理pwd参数。
@@ -23,14 +25,14 @@ public class URLParamUtil {
      * @param request HttpServerRequest对象
      * @return 完整的URL字符串
      */
-    public static String parserParams(HttpServerRequest request) {
+    public static String parserParams(HttpServletRequest request) {
 
-        String url = request.absoluteURI();
-        MultiMap params = request.params();
+        String url = request.getRequestURI();
+        Map<String, String[]> parameterMap = request.getParameterMap();
         // 处理URL截断的情况，例如: url='https://...&key=...&code=...'
-        if (params.contains("url")) {
-            String encodedUrl = params.get("url");
-            url = handleTruncatedUrl(encodedUrl, params);
+        if (parameterMap.containsKey("url")) {
+            String encodedUrl = parameterMap.get("url")[0];
+            url = handleTruncatedUrl(encodedUrl, parameterMap);
         }
         return url;
     }
@@ -42,12 +44,12 @@ public class URLParamUtil {
      * @param params     请求的其他参数
      * @return 重新拼接后的完整URL
      */
-    private static String handleTruncatedUrl(String encodedUrl, MultiMap params) {
+    private static String handleTruncatedUrl(String encodedUrl, Map<String, String[]> params) {
         // 对URL进行解码，以便获取完整的URL
         String decodedUrl = URLDecoder.decode(encodedUrl, StandardCharsets.UTF_8);
 
         // 如果URL已经包含查询参数，不需要额外拼接
-        if (params.contains("pwd")) {
+        if (params.containsKey("pwd")) {
             if (params.size() == 2) {
                 return decodedUrl;
             }
@@ -61,7 +63,7 @@ public class URLParamUtil {
         StringBuilder urlBuilder = new StringBuilder(decodedUrl);
         boolean firstParam = !decodedUrl.contains("?");
 
-        for (String paramName : params.names()) {
+        for (String paramName : params.keySet()) {
             if (!paramName.equals("url") && !paramName.equals("pwd") && !paramName.equals("dirId") && !paramName.equals("uuid")) {  // 忽略 "url" 和 "pwd" 参数
                 if (firstParam) {
                     urlBuilder.append("?");

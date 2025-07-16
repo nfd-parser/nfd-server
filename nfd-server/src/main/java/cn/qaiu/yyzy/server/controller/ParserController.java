@@ -5,6 +5,7 @@ import cn.qaiu.yyzy.framework.common.pojo.CommonResult;
 import cn.qaiu.yyzy.framework.common.util.servlet.ServletUtils;
 import io.vertx.core.Future;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,11 +24,13 @@ import static cn.qaiu.yyzy.framework.common.exception.enums.GlobalErrorCodeConst
 @Slf4j
 public class ParserController {
 
+    @GetMapping("/")
     public static void main(String[] args) {
-        ParserCreate parserCreate = ParserCreate.fromShareUrl("https://www.baidu.com").setShareLinkInfoPwd("1234");
+        ParserCreate parserCreate = ParserCreate.fromShareUrl("https://wwht.lanzouw.com/i3yKg30d5m1a").setShareLinkInfoPwd("2vbz");
         Future<String> parse = parserCreate.createTool().parse();
         parse.onComplete(ar -> {
             if (ar.succeeded()) {
+                System.out.println(ar.result());
                 log.info("成功");
             } else {
                 log.error("失败");
