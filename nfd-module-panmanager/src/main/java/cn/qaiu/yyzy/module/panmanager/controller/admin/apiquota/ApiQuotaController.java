@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/panmanager/apiQuota")
 @Validated
 public class ApiQuotaController {
+
     @Autowired
     private ApiQuotaService service;
 
@@ -39,4 +40,4 @@ public class ApiQuotaController {
     public CommonResult<PageResult<ApiQuotaRespVO>> page(@RequestBody ApiQuotaPageReqVO pageReqVO) {
         return CommonResult.success(service.page(pageReqVO));
     }
-} 
+}

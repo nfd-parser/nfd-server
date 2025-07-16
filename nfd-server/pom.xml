@@ -36,6 +36,11 @@
             <artifactId>nfd-module-panmanager</artifactId>
             <version>${revision}</version>
         </dependency>
+        <dependency>
+            <groupId>cn.qaiu.yyzy</groupId>
+            <artifactId>nfd-module-parser</artifactId>
+            <version>2.6.0-jdk8-SNAPSHOT</version>
+        </dependency>
 
         <!-- 支付服务。默认注释，保证编译速度 -->
 <!--        <dependency>-->
